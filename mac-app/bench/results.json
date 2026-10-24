@@ -1,0 +1,1630 @@
+{
+ "summary": {
+  "your flow": {
+   "jev": 6,
+   "rules": 6,
+   "n": 6
+  },
+  "tabs": {
+   "jev": 15,
+   "rules": 9,
+   "n": 16
+  },
+  "web": {
+   "jev": 8,
+   "rules": 6,
+   "n": 9
+  },
+  "notes": {
+   "jev": 4,
+   "rules": 3,
+   "n": 5
+  },
+  "system": {
+   "jev": 16,
+   "rules": 8,
+   "n": 17
+  },
+  "apps": {
+   "jev": 6,
+   "rules": 5,
+   "n": 7
+  },
+  "hinglish": {
+   "jev": 6,
+   "rules": 2,
+   "n": 6
+  },
+  "chatter": {
+   "jev": 8,
+   "rules": 5,
+   "n": 8
+  }
+ },
+ "total": {
+  "jev": 69,
+  "rules": 44,
+  "n": 74
+ },
+ "median_ms": {
+  "jev": 396,
+  "rules": 4.89199161529541
+ },
+ "cases": [
+  {
+   "kind": "your flow",
+   "said": "open terminal",
+   "want": {
+    "action": "open_app",
+    "app": "Terminal"
+   },
+   "jev": {
+    "app": "Terminal",
+    "action": "open_app",
+    "ms": 0,
+    "label": "Open Terminal",
+    "why": "exact name"
+   },
+   "rules": {
+    "label": "Open Terminal",
+    "action": "open_app",
+    "ms": 3.5469532012939453,
+    "app": "Terminal"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "your flow",
+   "said": "add a new tab to the terminal",
+   "want": {
+    "action": "new_tab",
+    "app": "Terminal"
+   },
+   "jev": {
+    "app": "Terminal",
+    "action": "new_tab",
+    "ms": 1137,
+    "label": "New tab in Terminal",
+    "why": "new_tab 1.00, asking 0.95"
+   },
+   "rules": {
+    "label": "New tab in Terminal",
+    "action": "new_tab",
+    "ms": 1.2990236282348633,
+    "app": "Terminal"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "your flow",
+   "said": "open wispr flow",
+   "want": {
+    "action": [
+     "dictate",
+     "open_app"
+    ]
+   },
+   "jev": {
+    "label": "Open Wispr Flow",
+    "action": "open_app",
+    "ms": 0,
+    "app": "Wispr Flow",
+    "why": "exact name"
+   },
+   "rules": {
+    "ms": 2.7070045471191406,
+    "label": "Voice typing",
+    "action": "dictate"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "your flow",
+   "said": "let me type",
+   "want": {
+    "action": "dictate"
+   },
+   "jev": {
+    "ms": 447,
+    "action": "dictate",
+    "label": "Voice typing",
+    "why": "dictate 0.83, asking 0.69"
+   },
+   "rules": {
+    "ms": 3.7200450897216797,
+    "action": "dictate",
+    "label": "Voice typing"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "your flow",
+   "said": "I want to dictate something",
+   "want": {
+    "action": "dictate"
+   },
+   "jev": {
+    "ms": 389,
+    "action": "dictate",
+    "label": "Voice typing",
+    "why": "dictate 0.85, asking 0.86"
+   },
+   "rules": {
+    "ms": 4.781007766723633,
+    "action": "dictate",
+    "label": "Voice typing"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "your flow",
+   "said": "now run it",
+   "want": {
+    "action": "press_enter"
+   },
+   "jev": {
+    "ms": 388,
+    "action": "press_enter",
+    "label": "Press Enter",
+    "why": "press_enter 0.96, asking 0.86"
+   },
+   "rules": {
+    "ms": 3.3680200576782227,
+    "action": "press_enter",
+    "label": "Press Enter"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "tabs",
+   "said": "open a new tab",
+   "want": {
+    "action": "new_tab"
+   },
+   "jev": {
+    "ms": 376,
+    "action": "new_tab",
+    "label": "New tab",
+    "why": "new_tab 1.00, asking 0.94"
+   },
+   "rules": {
+    "ms": 4.982948303222656,
+    "label": "New tab",
+    "action": "new_tab"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "tabs",
+   "said": "new tab in chrome",
+   "want": {
+    "action": "new_tab",
+    "app": "Google Chrome"
+   },
+   "jev": {
+    "app": "Google Chrome",
+    "action": "new_tab",
+    "ms": 399,
+    "label": "New tab in Google Chrome",
+    "why": "new_tab 1.00, asking 0.90"
+   },
+   "rules": {
+    "label": "New tab in Google Chrome",
+    "action": "new_tab",
+    "ms": 4.677057266235352,
+    "app": "Google Chrome"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "tabs",
+   "said": "give me another tab",
+   "want": {
+    "action": "new_tab"
+   },
+   "jev": {
+    "ms": 386,
+    "action": "new_tab",
+    "label": "New tab",
+    "why": "new_tab 0.92, asking 0.89"
+   },
+   "rules": {
+    "ms": 4.009008407592773,
+    "label": "New tab",
+    "action": "new_tab"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "tabs",
+   "said": "one more tab please",
+   "want": {
+    "action": "new_tab"
+   },
+   "jev": {
+    "ms": 380,
+    "action": "new_tab",
+    "label": "New tab",
+    "why": "new_tab 0.99, asking 0.92"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 5.694031715393066
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "tabs",
+   "said": "close this tab",
+   "want": {
+    "action": "close_tab"
+   },
+   "jev": {
+    "ms": 422,
+    "action": "close_tab",
+    "label": "Close tab",
+    "why": "close_tab 1.00, asking 0.93"
+   },
+   "rules": {
+    "ms": 5.120992660522461,
+    "label": "Close tab",
+    "action": "close_tab"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "tabs",
+   "said": "get rid of this tab",
+   "want": {
+    "action": "close_tab"
+   },
+   "jev": {
+    "ms": 403,
+    "action": "close_tab",
+    "label": "Close tab",
+    "why": "close_tab 1.00, asking 0.94"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 5.379080772399902
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "tabs",
+   "said": "bring back the tab I just closed",
+   "want": {
+    "action": "reopen_tab"
+   },
+   "jev": {
+    "ms": 380,
+    "action": "reopen_tab",
+    "label": "Reopen closed tab",
+    "why": "reopen_tab 1.00, asking 0.95"
+   },
+   "rules": {
+    "ms": 5.221009254455566,
+    "action": "reopen_tab",
+    "label": "Reopen closed tab"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "tabs",
+   "said": "oops open that tab again",
+   "want": {
+    "action": "reopen_tab"
+   },
+   "jev": {
+    "ms": 396,
+    "action": "reopen_tab",
+    "label": "Reopen closed tab",
+    "why": "reopen_tab 0.99, asking 0.91"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 4.89199161529541
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "tabs",
+   "said": "go to the next tab",
+   "want": {
+    "action": "next_tab"
+   },
+   "jev": {
+    "ms": 385,
+    "action": "next_tab",
+    "label": "Next tab",
+    "why": "next_tab 1.00, asking 0.93"
+   },
+   "rules": {
+    "ms": 5.04302978515625,
+    "label": "Next tab",
+    "action": "next_tab"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "tabs",
+   "said": "refresh the page",
+   "want": {
+    "action": "reload"
+   },
+   "jev": {
+    "ms": 376,
+    "action": "reload",
+    "label": "Reload",
+    "why": "reload 1.00, asking 0.93"
+   },
+   "rules": {
+    "ms": 4.101037979125977,
+    "action": "reload",
+    "label": "Reload"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "tabs",
+   "said": "the page is stuck load it again",
+   "want": {
+    "action": "reload"
+   },
+   "jev": {
+    "ms": 411,
+    "action": "reload",
+    "label": "Reload",
+    "why": "reload 0.99, asking 0.91"
+   },
+   "rules": {
+    "ms": 5.872964859008789,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "tabs",
+   "said": "go back",
+   "want": {
+    "action": "go_back"
+   },
+   "jev": {
+    "ms": 446,
+    "action": "go_back",
+    "label": "Back",
+    "why": "go_back 0.97, asking 0.86"
+   },
+   "rules": {
+    "ms": 1.7900466918945312,
+    "action": "go_back",
+    "label": "Back"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "tabs",
+   "said": "take me to the previous page",
+   "want": {
+    "action": "go_back"
+   },
+   "jev": {
+    "ms": 402,
+    "action": "go_back",
+    "label": "Back",
+    "why": "go_back 0.99, asking 0.94"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 5.44893741607666
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "tabs",
+   "said": "open a new safari window",
+   "want": {
+    "action": "new_window",
+    "app": "Safari"
+   },
+   "jev": {
+    "ms": 425,
+    "action": "new_window",
+    "label": "New window",
+    "why": "new_window 0.96, asking 0.95"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 5.042910575866699
+   },
+   "jev_ok": false,
+   "rules_ok": false
+  },
+  {
+   "kind": "tabs",
+   "said": "make this window full screen",
+   "want": {
+    "action": "fullscreen"
+   },
+   "jev": {
+    "ms": 429,
+    "action": "fullscreen",
+    "label": "Full screen",
+    "why": "fullscreen 1.00, asking 0.96"
+   },
+   "rules": {
+    "ms": 4.680991172790527,
+    "label": "Full screen",
+    "action": "fullscreen"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "tabs",
+   "said": "hide this window",
+   "want": {
+    "action": "minimize"
+   },
+   "jev": {
+    "ms": 443,
+    "action": "minimize",
+    "label": "Minimise",
+    "why": "minimize 0.52, asking 0.93"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 4.878997802734375
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "web",
+   "said": "search for flights to goa",
+   "want": {
+    "action": "web_search",
+    "text": "flights to goa"
+   },
+   "jev": {
+    "text": "flights to goa",
+    "action": "web_search",
+    "ms": 430,
+    "label": "Search \u201cflights to goa\u201d",
+    "why": "web_search 0.99, asking 0.94"
+   },
+   "rules": {
+    "label": "Search \u201cflights to goa\u201d",
+    "action": "web_search",
+    "ms": 4.317998886108398,
+    "text": "flights to goa"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "web",
+   "said": "google best biryani in delhi",
+   "want": {
+    "action": "web_search",
+    "text": "best biryani in delhi"
+   },
+   "jev": {
+    "app": "Google Chrome",
+    "action": "web_search",
+    "text": "best biryani in delhi",
+    "ms": 369,
+    "label": "Search \u201cbest biryani in delhi\u201d",
+    "why": "web_search 0.98, asking 0.94"
+   },
+   "rules": {
+    "label": "Search \u201cbest biryani in delhi\u201d",
+    "action": "web_search",
+    "ms": 5.376935005187988,
+    "text": "best biryani in delhi"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "web",
+   "said": "what is the capital of australia",
+   "want": {
+    "action": "web_search"
+   },
+   "jev": {
+    "ms": 394,
+    "why": "none 0.63, asking 0.75",
+    "action": "none"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 5.39398193359375
+   },
+   "jev_ok": false,
+   "rules_ok": false
+  },
+  {
+   "kind": "web",
+   "said": "look up the nifty closing price",
+   "want": {
+    "action": "web_search",
+    "text": [
+     "the nifty closing price",
+     "nifty closing price"
+    ]
+   },
+   "jev": {
+    "app": "Stocks",
+    "action": "web_search",
+    "text": "nifty closing price",
+    "ms": 438,
+    "label": "Search \u201cnifty closing price\u201d",
+    "why": "web_search 0.96, asking 0.94"
+   },
+   "rules": {
+    "label": "Search \u201cthe nifty closing price\u201d",
+    "action": "web_search",
+    "ms": 5.445003509521484,
+    "text": "the nifty closing price"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "web",
+   "said": "open youtube",
+   "want": {
+    "action": "open_website",
+    "text": "youtube"
+   },
+   "jev": {
+    "text": "youtube",
+    "action": "open_website",
+    "ms": 435,
+    "label": "Open youtube",
+    "why": "open_website 0.86, asking 0.94"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 4.6939849853515625
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "web",
+   "said": "go to amazon dot in",
+   "want": {
+    "action": "open_website"
+   },
+   "jev": {
+    "text": "amazon dot in",
+    "action": "open_website",
+    "ms": 377,
+    "label": "Open amazon dot in",
+    "why": "open_website 0.98, asking 0.91"
+   },
+   "rules": {
+    "label": "Open amazon dot in",
+    "action": "open_website",
+    "ms": 3.715038299560547,
+    "text": "amazon dot in"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "web",
+   "said": "take me to gmail",
+   "want": {
+    "action": "open_website",
+    "text": "gmail"
+   },
+   "jev": {
+    "app": "Mail",
+    "action": "open_website",
+    "text": "gmail",
+    "ms": 383,
+    "label": "Open gmail",
+    "why": "open_website 1.00, asking 0.95"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 4.242062568664551
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "web",
+   "said": "find lofi music on youtube",
+   "want": {
+    "action": "youtube_search",
+    "text": "lofi music"
+   },
+   "jev": {
+    "text": "lofi music",
+    "action": "youtube_search",
+    "ms": 389,
+    "label": "YouTube \u201clofi music\u201d",
+    "why": "youtube_search 1.00, asking 0.93"
+   },
+   "rules": {
+    "label": "YouTube \u201clofi music\u201d",
+    "action": "youtube_search",
+    "ms": 4.106044769287109,
+    "text": "lofi music"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "web",
+   "said": "play arijit singh songs on youtube",
+   "want": {
+    "action": "youtube_search",
+    "text": "arijit singh songs"
+   },
+   "jev": {
+    "text": "arijit singh songs",
+    "action": "youtube_search",
+    "ms": 401,
+    "label": "YouTube \u201carijit singh songs\u201d",
+    "why": "youtube_search 0.97, asking 0.95"
+   },
+   "rules": {
+    "label": "YouTube \u201carijit singh songs\u201d",
+    "action": "youtube_search",
+    "ms": 5.389928817749023,
+    "text": "arijit singh songs"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "notes",
+   "said": "make a note saying call the bank tomorrow",
+   "want": {
+    "action": "new_note",
+    "text": "call the bank tomorrow"
+   },
+   "jev": {
+    "app": "Notes",
+    "action": "new_note",
+    "text": "call the bank tomorrow",
+    "ms": 419,
+    "label": "Note \u201ccall the bank tomorrow\u201d",
+    "why": "new_note 0.72, asking 0.94"
+   },
+   "rules": {
+    "label": "Note \u201ccall the bank tomorrow\u201d",
+    "action": "new_note",
+    "ms": 5.380988121032715,
+    "text": "call the bank tomorrow"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "notes",
+   "said": "jot down buy milk and eggs",
+   "want": {
+    "action": "new_note"
+   },
+   "jev": {
+    "app": "Reminders",
+    "action": "new_reminder",
+    "text": "buy milk and eggs",
+    "ms": 396,
+    "label": "Reminder \u201cbuy milk and eggs\u201d",
+    "why": "new_reminder 0.77, asking 0.91"
+   },
+   "rules": {
+    "ms": 5.118012428283691,
+    "action": "none"
+   },
+   "jev_ok": false,
+   "rules_ok": false
+  },
+  {
+   "kind": "notes",
+   "said": "remind me to pay rent",
+   "want": {
+    "action": "new_reminder",
+    "text": "pay rent"
+   },
+   "jev": {
+    "app": "Reminders",
+    "action": "new_reminder",
+    "text": "pay rent",
+    "ms": 385,
+    "label": "Reminder \u201cpay rent\u201d",
+    "why": "new_reminder 1.00, asking 0.95"
+   },
+   "rules": {
+    "label": "Reminder \u201cpay rent\u201d",
+    "action": "new_reminder",
+    "ms": 4.075050354003906,
+    "text": "pay rent"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "notes",
+   "said": "don't let me forget to email ankit",
+   "want": {
+    "action": "new_reminder",
+    "text": "email ankit"
+   },
+   "jev": {
+    "app": "Mail",
+    "action": "new_reminder",
+    "text": "email ankit",
+    "ms": 384,
+    "label": "Reminder \u201cemail ankit\u201d",
+    "why": "new_reminder 0.99, asking 0.92"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 4.68289852142334
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "notes",
+   "said": "add submit the report to my reminders",
+   "want": {
+    "action": "new_reminder",
+    "text": "submit the report"
+   },
+   "jev": {
+    "app": "Reminders",
+    "action": "new_reminder",
+    "text": "submit the report",
+    "ms": 486,
+    "label": "Reminder \u201csubmit the report\u201d",
+    "why": "new_reminder 1.00, asking 0.96"
+   },
+   "rules": {
+    "label": "Reminder \u201csubmit the report\u201d",
+    "action": "new_reminder",
+    "ms": 4.6509504318237305,
+    "text": "submit the report"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "system",
+   "said": "turn the volume up",
+   "want": {
+    "action": "volume",
+    "setting": "up"
+   },
+   "jev": {
+    "action": "volume",
+    "ms": 391,
+    "setting": "up",
+    "label": "Volume up",
+    "why": "volume 1.00, asking 0.95"
+   },
+   "rules": {
+    "setting": "up",
+    "label": "Volume up",
+    "action": "volume",
+    "ms": 5.746006965637207
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "system",
+   "said": "it's too loud",
+   "want": {
+    "action": "volume",
+    "setting": [
+     "down",
+     "low"
+    ]
+   },
+   "jev": {
+    "action": "volume",
+    "ms": 392,
+    "setting": "down",
+    "label": "Volume down",
+    "why": "volume 1.00, asking 0.80"
+   },
+   "rules": {
+    "ms": 4.896044731140137,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "system",
+   "said": "mute",
+   "want": {
+    "action": "volume",
+    "setting": "mute"
+   },
+   "jev": {
+    "action": "volume",
+    "ms": 370,
+    "setting": "mute",
+    "label": "Volume mute",
+    "why": "volume 1.00, asking 0.90"
+   },
+   "rules": {
+    "setting": "mute",
+    "label": "Volume mute",
+    "action": "volume",
+    "ms": 4.570960998535156
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "system",
+   "said": "set volume to half",
+   "want": {
+    "action": "volume",
+    "setting": "half"
+   },
+   "jev": {
+    "action": "volume",
+    "ms": 412,
+    "setting": "half",
+    "label": "Volume half",
+    "why": "volume 1.00, asking 0.96"
+   },
+   "rules": {
+    "setting": "half",
+    "label": "Volume half",
+    "action": "volume",
+    "ms": 4.541993141174316
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "system",
+   "said": "i can't hear anything make it louder",
+   "want": {
+    "action": "volume",
+    "setting": [
+     "up",
+     "max"
+    ]
+   },
+   "jev": {
+    "action": "volume",
+    "ms": 384,
+    "setting": "up",
+    "label": "Volume up",
+    "why": "volume 0.99, asking 0.94"
+   },
+   "rules": {
+    "setting": "up",
+    "label": "Volume up",
+    "action": "volume",
+    "ms": 5.33902645111084
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "system",
+   "said": "pause the music",
+   "want": {
+    "action": "media",
+    "setting": "play_pause"
+   },
+   "jev": {
+    "app": "Music",
+    "action": "media",
+    "ms": 391,
+    "setting": "play_pause",
+    "label": "Play/Pause",
+    "why": "media 1.00, asking 0.95"
+   },
+   "rules": {
+    "setting": "play_pause",
+    "label": "Play/Pause",
+    "action": "media",
+    "ms": 4.063010215759277
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "system",
+   "said": "skip this song",
+   "want": {
+    "action": "media",
+    "setting": "next"
+   },
+   "jev": {
+    "app": "Music",
+    "action": "media",
+    "ms": 400,
+    "setting": "next",
+    "label": "Next",
+    "why": "media 1.00, asking 0.95"
+   },
+   "rules": {
+    "setting": "next",
+    "label": "Next",
+    "action": "media",
+    "ms": 5.401015281677246
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "system",
+   "said": "play the last song again",
+   "want": {
+    "action": "media",
+    "setting": "previous"
+   },
+   "jev": {
+    "app": "Music",
+    "action": "media",
+    "ms": 422,
+    "setting": "previous",
+    "label": "Previous",
+    "why": "media 1.00, asking 0.95"
+   },
+   "rules": {
+    "ms": 4.823923110961914,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "system",
+   "said": "switch to dark mode",
+   "want": {
+    "action": "appearance",
+    "setting": "dark"
+   },
+   "jev": {
+    "action": "appearance",
+    "ms": 454,
+    "setting": "dark",
+    "label": "Dark mode",
+    "why": "appearance 1.00, asking 0.95"
+   },
+   "rules": {
+    "setting": "dark",
+    "label": "Dark mode",
+    "action": "appearance",
+    "ms": 3.9669275283813477
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "system",
+   "said": "my eyes hurt make everything dark",
+   "want": {
+    "action": "appearance",
+    "setting": "dark"
+   },
+   "jev": {
+    "ms": 385,
+    "why": "brightness 0.50, asking 0.32",
+    "action": "none"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 5.102992057800293
+   },
+   "jev_ok": false,
+   "rules_ok": false
+  },
+  {
+   "kind": "system",
+   "said": "the screen is too bright",
+   "want": {
+    "action": "brightness",
+    "setting": "down"
+   },
+   "jev": {
+    "action": "brightness",
+    "ms": 414,
+    "setting": "down",
+    "label": "Brightness down",
+    "why": "brightness 1.00, asking 0.80"
+   },
+   "rules": {
+    "ms": 5.115985870361328,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "system",
+   "said": "take a screenshot",
+   "want": {
+    "action": "screenshot"
+   },
+   "jev": {
+    "app": "Screenshot",
+    "action": "screenshot",
+    "ms": 430,
+    "label": "Screenshot",
+    "why": "screenshot 1.00, asking 0.91"
+   },
+   "rules": {
+    "ms": 3.7779808044433594,
+    "action": "screenshot",
+    "label": "Screenshot"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "system",
+   "said": "grab what's on my screen",
+   "want": {
+    "action": "screenshot"
+   },
+   "jev": {
+    "app": "Screenshot",
+    "action": "screenshot",
+    "ms": 394,
+    "label": "Screenshot",
+    "why": "screenshot 0.99, asking 0.94"
+   },
+   "rules": {
+    "ms": 5.343079566955566,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "system",
+   "said": "lock my mac",
+   "want": {
+    "action": "lock_screen"
+   },
+   "jev": {
+    "ms": 447,
+    "action": "lock_screen",
+    "label": "Lock screen",
+    "why": "lock_screen 1.00, asking 0.94"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 5.005002021789551
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "system",
+   "said": "i'm stepping away lock it",
+   "want": {
+    "action": "lock_screen"
+   },
+   "jev": {
+    "ms": 377,
+    "action": "lock_screen",
+    "label": "Lock screen",
+    "why": "lock_screen 0.99, asking 0.88"
+   },
+   "rules": {
+    "ms": 4.994988441467285,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "system",
+   "said": "show me my downloads",
+   "want": {
+    "action": "open_folder",
+    "setting": "downloads"
+   },
+   "jev": {
+    "app": "Finder",
+    "action": "open_folder",
+    "ms": 402,
+    "setting": "downloads",
+    "label": "Open Downloads",
+    "why": "open_folder 1.00, asking 0.94"
+   },
+   "rules": {
+    "ms": 5.735993385314941,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "system",
+   "said": "where did that file i downloaded go",
+   "want": {
+    "action": "open_folder",
+    "setting": "downloads"
+   },
+   "jev": {
+    "action": "open_folder",
+    "ms": 381,
+    "setting": "downloads",
+    "label": "Open Downloads",
+    "why": "open_folder 0.83, asking 0.74"
+   },
+   "rules": {
+    "ms": 5.121946334838867,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "apps",
+   "said": "open slack",
+   "want": {
+    "action": "open_app",
+    "app": "Slack"
+   },
+   "jev": {
+    "app": "Slack",
+    "action": "open_app",
+    "ms": 0,
+    "label": "Open Slack",
+    "why": "exact name"
+   },
+   "rules": {
+    "label": "Open Slack",
+    "action": "open_app",
+    "ms": 2.6099681854248047,
+    "app": "Slack"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "apps",
+   "said": "open the app i make 3d models in",
+   "want": {
+    "action": "open_app",
+    "app": "Blender"
+   },
+   "jev": {
+    "app": "Blender",
+    "action": "open_app",
+    "ms": 451,
+    "label": "Open Blender",
+    "why": "open_app 1.00, asking 0.93"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 3.521084785461426
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "apps",
+   "said": "i need to check my email",
+   "want": {
+    "action": "open_app",
+    "app": "Mail"
+   },
+   "jev": {
+    "app": "Mail",
+    "action": "open_app",
+    "ms": 449,
+    "label": "Open Mail",
+    "why": "open_app 0.58, asking 0.78"
+   },
+   "rules": {
+    "ms": 5.2700042724609375,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "apps",
+   "said": "quit telegram",
+   "want": {
+    "action": "quit_app",
+    "app": "Telegram"
+   },
+   "jev": {
+    "app": "Telegram",
+    "action": "quit_app",
+    "ms": 388,
+    "label": "Quit Telegram",
+    "why": "quit_app 1.00, asking 0.91"
+   },
+   "rules": {
+    "label": "Quit Telegram",
+    "action": "quit_app",
+    "ms": 4.24504280090332,
+    "app": "Telegram"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "apps",
+   "said": "close whatsapp completely",
+   "want": {
+    "action": "quit_app",
+    "app": "WhatsApp"
+   },
+   "jev": {
+    "app": "WhatsApp",
+    "action": "quit_app",
+    "ms": 385,
+    "label": "Quit WhatsApp",
+    "why": "quit_app 1.00, asking 0.93"
+   },
+   "rules": {
+    "label": "Quit WhatsApp",
+    "action": "quit_app",
+    "ms": 2.982974052429199,
+    "app": "WhatsApp"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "apps",
+   "said": "open tell a gram",
+   "want": {
+    "action": "open_app",
+    "app": "Telegram"
+   },
+   "jev": {
+    "app": "Telegram",
+    "action": "open_app",
+    "ms": 381,
+    "label": "Open Telegram",
+    "why": "open_app 0.73, asking 0.88"
+   },
+   "rules": {
+    "label": "Open Telegram",
+    "action": "open_app",
+    "ms": 5.761981010437012,
+    "app": "Telegram"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "apps",
+   "said": "open cloud",
+   "want": {
+    "action": "open_app",
+    "app": [
+     "Claude",
+     "Creative Cloud"
+    ]
+   },
+   "jev": {
+    "why": "open_app 0.62, asking 0.90, no app",
+    "action": "none",
+    "ms": 422
+   },
+   "rules": {
+    "app": "Claude",
+    "action": "open_app",
+    "ms": 3.731966018676758,
+    "label": "Open Claude"
+   },
+   "jev_ok": false,
+   "rules_ok": true
+  },
+  {
+   "kind": "hinglish",
+   "said": "chrome kholo",
+   "want": {
+    "action": "open_app",
+    "app": "Google Chrome"
+   },
+   "jev": {
+    "app": "Google Chrome",
+    "action": "open_app",
+    "ms": 404,
+    "label": "Open Google Chrome",
+    "why": "open_app 0.95, asking 0.68"
+   },
+   "rules": {
+    "label": "Open Google Chrome",
+    "action": "open_app",
+    "ms": 4.492998123168945,
+    "app": "Google Chrome"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "hinglish",
+   "said": "naya tab kholo",
+   "want": {
+    "action": "new_tab"
+   },
+   "jev": {
+    "app": "Terminal",
+    "action": "new_tab",
+    "ms": 406,
+    "label": "New tab in Terminal",
+    "why": "new_tab 1.00, asking 0.91"
+   },
+   "rules": {
+    "ms": 5.198955535888672,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "hinglish",
+   "said": "awaaz kam karo",
+   "want": {
+    "action": "volume",
+    "setting": [
+     "down",
+     "low"
+    ]
+   },
+   "jev": {
+    "action": "volume",
+    "ms": 389,
+    "setting": "down",
+    "label": "Volume down",
+    "why": "volume 1.00, asking 0.94"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 4.701972007751465
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "hinglish",
+   "said": "gaana band karo",
+   "want": {
+    "action": "media",
+    "setting": "play_pause"
+   },
+   "jev": {
+    "action": "media",
+    "ms": 368,
+    "setting": "play_pause",
+    "label": "Play/Pause",
+    "why": "media 0.68, asking 0.94"
+   },
+   "rules": {
+    "ms": 5.285978317260742,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "hinglish",
+   "said": "whatsapp band karo",
+   "want": {
+    "action": "quit_app",
+    "app": "WhatsApp"
+   },
+   "jev": {
+    "app": "WhatsApp",
+    "action": "quit_app",
+    "ms": 545,
+    "label": "Quit WhatsApp",
+    "why": "quit_app 0.82, asking 0.90"
+   },
+   "rules": {
+    "label": "Quit WhatsApp",
+    "action": "quit_app",
+    "ms": 3.957033157348633,
+    "app": "WhatsApp"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "hinglish",
+   "said": "mujhe type karne do",
+   "want": {
+    "action": "dictate"
+   },
+   "jev": {
+    "ms": 375,
+    "action": "dictate",
+    "label": "Voice typing",
+    "why": "dictate 0.76, asking 0.79"
+   },
+   "rules": {
+    "ms": 4.417061805725098,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "chatter",
+   "said": "i opened a new tab earlier and lost it",
+   "want": {
+    "action": "none"
+   },
+   "jev": {
+    "ms": 446,
+    "why": "reopen_tab 0.89, asking 0.22",
+    "action": "none"
+   },
+   "rules": {
+    "ms": 5.698919296264648,
+    "action": "new_tab",
+    "label": "New tab"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "chatter",
+   "said": "the volume on that video was terrible",
+   "want": {
+    "action": "none"
+   },
+   "jev": {
+    "ms": 390,
+    "why": "volume 0.95, asking 0.29",
+    "action": "none"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 6.10506534576416
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "chatter",
+   "said": "i should really remind him about the rent",
+   "want": {
+    "action": "none"
+   },
+   "jev": {
+    "ms": 438,
+    "why": "new_reminder 0.62, asking 0.27",
+    "action": "none"
+   },
+   "rules": {
+    "ms": 5.789041519165039,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "chatter",
+   "said": "she searched everywhere for her keys",
+   "want": {
+    "action": "none"
+   },
+   "jev": {
+    "ms": 402,
+    "why": "none 0.91, asking 0.07",
+    "action": "none"
+   },
+   "rules": {
+    "ms": 6.659984588623047,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "chatter",
+   "said": "dark mode looks so much better on the new mac",
+   "want": {
+    "action": "none"
+   },
+   "jev": {
+    "ms": 457,
+    "why": "none 0.67, asking 0.05",
+    "action": "none"
+   },
+   "rules": {
+    "action": "appearance",
+    "ms": 5.625009536743164,
+    "setting": "dark",
+    "label": "Dark mode"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "chatter",
+   "said": "terminal velocity is a great movie",
+   "want": {
+    "action": "none"
+   },
+   "jev": {
+    "ms": 376,
+    "why": "none 0.87, asking 0.06",
+    "action": "none"
+   },
+   "rules": {
+    "ms": 4.091978073120117,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "chatter",
+   "said": "let me think about it",
+   "want": {
+    "action": "none"
+   },
+   "jev": {
+    "ms": 413,
+    "why": "none 1.00, asking 0.27",
+    "action": "none"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 4.208087921142578
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "chatter",
+   "said": "we should go back to that restaurant",
+   "want": {
+    "action": "none"
+   },
+   "jev": {
+    "ms": 386,
+    "why": "none 0.83, asking 0.52",
+    "action": "none"
+   },
+   "rules": {
+    "ms": 5.429983139038086,
+    "label": "Back",
+    "action": "go_back"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  }
+ ]
+}

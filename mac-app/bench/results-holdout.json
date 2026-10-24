@@ -1,0 +1,345 @@
+{
+ "summary": {
+  "holdout": {
+   "jev": 14,
+   "rules": 7,
+   "n": 15
+  }
+ },
+ "total": {
+  "jev": 14,
+  "rules": 7,
+  "n": 15
+ },
+ "median_ms": {
+  "jev": 580,
+  "rules": 6.81304931640625
+ },
+ "cases": [
+  {
+   "kind": "holdout",
+   "said": "open a fresh tab in safari",
+   "want": {
+    "action": "new_tab",
+    "app": "Safari"
+   },
+   "jev": {
+    "action": "new_tab",
+    "app": "Safari",
+    "ms": 2113,
+    "label": "New tab in Safari",
+    "why": "new_tab 1.00, asking 0.95, app Safari 1.00"
+   },
+   "rules": {
+    "app": "Safari",
+    "ms": 5.859971046447754,
+    "label": "Open Safari",
+    "action": "open_app"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "holdout",
+   "said": "shut this tab",
+   "want": {
+    "action": "close_tab"
+   },
+   "jev": {
+    "action": "close_tab",
+    "ms": 603,
+    "label": "Close tab",
+    "why": "close_tab 1.00, asking 0.92, app none 0.66"
+   },
+   "rules": {
+    "ms": 6.81304931640625,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "holdout",
+   "said": "look for cheap hotels in manali",
+   "want": {
+    "action": "web_search",
+    "text": [
+     "cheap hotels in manali"
+    ]
+   },
+   "jev": {
+    "why": "web_search 1.00, asking 0.95, app Maps 0.61",
+    "action": "web_search",
+    "app": "Maps",
+    "ms": 912,
+    "label": "Search \u201ccheap hotels in manali\u201d",
+    "text": "cheap hotels in manali"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 7.390022277832031
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "holdout",
+   "said": "pull up netflix",
+   "want": {
+    "action": [
+     "open_website"
+    ],
+    "text": "netflix"
+   },
+   "jev": {
+    "why": "open_website 0.50, asking 0.95, app none 0.76",
+    "action": "open_website",
+    "ms": 579,
+    "text": "netflix",
+    "label": "Open netflix"
+   },
+   "rules": {
+    "ms": 7.236003875732422,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "holdout",
+   "said": "write down that the meeting moved to friday",
+   "want": {
+    "action": "new_note"
+   },
+   "jev": {
+    "why": "new_note 0.73, asking 0.94, app Calendar 0.48",
+    "action": "new_note",
+    "ms": 938,
+    "label": "Note \u201cthe meeting moved to friday\u201d",
+    "text": "the meeting moved to friday"
+   },
+   "rules": {
+    "ms": 9.01806354522705,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "holdout",
+   "said": "nudge me to drink water",
+   "want": {
+    "action": "new_reminder",
+    "text": "drink water"
+   },
+   "jev": {
+    "why": "new_reminder 0.78, asking 0.94, app none 0.92",
+    "action": "new_reminder",
+    "ms": 707,
+    "text": "me to drink water",
+    "label": "Reminder \u201cme to drink water\u201d"
+   },
+   "rules": {
+    "ms": 7.611989974975586,
+    "action": "none"
+   },
+   "jev_ok": false,
+   "rules_ok": false
+  },
+  {
+   "kind": "holdout",
+   "said": "crank up the volume",
+   "want": {
+    "action": "volume",
+    "setting": [
+     "up",
+     "max"
+    ]
+   },
+   "jev": {
+    "why": "volume 1.00, asking 0.93, app none 0.90",
+    "action": "volume",
+    "setting": "up",
+    "label": "Volume up",
+    "ms": 580
+   },
+   "rules": {
+    "setting": "up",
+    "ms": 8.264899253845215,
+    "label": "Volume up",
+    "action": "volume"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "holdout",
+   "said": "silence please",
+   "want": {
+    "action": "volume",
+    "setting": "mute"
+   },
+   "jev": {
+    "why": "volume 0.97, asking 0.87, app none 0.96",
+    "action": "volume",
+    "setting": "mute",
+    "label": "Volume mute",
+    "ms": 577
+   },
+   "rules": {
+    "ms": 7.172942161560059,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "holdout",
+   "said": "next track",
+   "want": {
+    "action": "media",
+    "setting": "next"
+   },
+   "jev": {
+    "why": "media 1.00, asking 0.92, app Music 0.59",
+    "action": "media",
+    "app": "Music",
+    "setting": "next",
+    "label": "Next",
+    "ms": 648
+   },
+   "rules": {
+    "setting": "next",
+    "ms": 5.214929580688477,
+    "label": "Next",
+    "action": "media"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "holdout",
+   "said": "open my documents folder",
+   "want": {
+    "action": "open_folder",
+    "setting": "documents"
+   },
+   "jev": {
+    "why": "open_folder 1.00, asking 0.96, app Finder 0.94",
+    "action": "open_folder",
+    "app": "Finder",
+    "setting": "documents",
+    "label": "Open Documents",
+    "ms": 580
+   },
+   "rules": {
+    "setting": "documents",
+    "ms": 6.072998046875,
+    "label": "Open Documents",
+    "action": "open_folder"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "holdout",
+   "said": "fire up figma",
+   "want": {
+    "action": "open_app",
+    "app": "Figma"
+   },
+   "jev": {
+    "app": "Figma",
+    "ms": 0,
+    "label": "Open Figma",
+    "why": "exact name",
+    "action": "open_app"
+   },
+   "rules": {
+    "ms": 5.015015602111816,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": false
+  },
+  {
+   "kind": "holdout",
+   "said": "get out of notion",
+   "want": {
+    "action": "none"
+   },
+   "jev": {
+    "why": "quit_app 0.91, asking 0.82, app none 0.92, no app",
+    "action": "none",
+    "ms": 575
+   },
+   "rules": {
+    "ms": 5.138993263244629,
+    "action": "none"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "holdout",
+   "said": "kill slack",
+   "want": {
+    "action": "quit_app",
+    "app": "Slack"
+   },
+   "jev": {
+    "action": "quit_app",
+    "app": "Slack",
+    "ms": 566,
+    "label": "Quit Slack",
+    "why": "quit_app 0.96, asking 0.88, app Slack 1.00"
+   },
+   "rules": {
+    "app": "Slack",
+    "ms": 5.824089050292969,
+    "label": "Quit Slack",
+    "action": "quit_app"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "holdout",
+   "said": "i watched the whole series yesterday",
+   "want": {
+    "action": "none"
+   },
+   "jev": {
+    "why": "none 0.99, asking 0.05, app none 0.79",
+    "ms": 530,
+    "action": "none"
+   },
+   "rules": {
+    "action": "none",
+    "ms": 8.444905281066895
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  },
+  {
+   "kind": "holdout",
+   "said": "start voice typing",
+   "want": {
+    "action": "dictate"
+   },
+   "jev": {
+    "action": "dictate",
+    "ms": 645,
+    "label": "Voice typing",
+    "why": "dictate 1.00, asking 0.92, app none 0.50"
+   },
+   "rules": {
+    "label": "Voice typing",
+    "ms": 6.0509443283081055,
+    "action": "dictate"
+   },
+   "jev_ok": true,
+   "rules_ok": true
+  }
+ ]
+}

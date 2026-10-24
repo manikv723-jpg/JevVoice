@@ -1,0 +1,15 @@
+SayOpen: say an app, it opens.
+
+1. Drag SayOpen into Applications.
+2. Open it. macOS will say it can't check the developer. Click Done.
+3. Go to System Settings > Privacy & Security, scroll down, click "Open Anyway" next to SayOpen.
+   (Only needed once. It happens because this build isn't notarised by Apple.)
+4. A waveform icon appears in the menu bar. Click it, paste your TypeSafe API key
+   (get one at console.typesafe.ai). The key is saved privately on your Mac.
+5. Allow the microphone and speech recognition when asked.
+
+Then just say "open Chrome", "open the app I edit videos in", "notes kholo".
+Control + Option + Space turns listening on and off.
+
+Speech is recognised on your Mac. The only thing sent over the network is the
+transcript, to api.typesafe.ai, to decide which app you meant.

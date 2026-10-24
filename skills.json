@@ -1,0 +1,299 @@
+{
+  "_comment": "Add a capability here and it appears in Jev's menu on the next run. No Python. arg types: span (a phrase selected out of what you said), app (any installed app), enum (one of the listed options; the value on the right is what gets substituted).",
+  "capabilities": [
+    {
+      "id": "open_app",
+      "description": "Launch or switch to an application. Use when the speaker names an app to open, show, bring up, start or switch to.",
+      "args": {
+        "app": {
+          "type": "app"
+        }
+      },
+      "run": [
+        "open",
+        "-a",
+        "{app}"
+      ],
+      "refine": true
+    },
+    {
+      "id": "quit_app",
+      "description": "Quit or close an application entirely. Use for quit, close, kill or shut down an app.",
+      "args": {
+        "app": {
+          "type": "app"
+        }
+      },
+      "run": [
+        "osascript",
+        "-e",
+        "tell application \"{app}\" to quit"
+      ]
+    },
+    {
+      "id": "new_note",
+      "description": "Create a new note in the Notes app with a title the speaker dictated.",
+      "args": {
+        "title": {
+          "type": "span"
+        }
+      },
+      "run": [
+        "osascript",
+        "-e",
+        "tell application \"Notes\"\nactivate\nmake new note with properties {body:\"<div><b>{title}</b></div><div><br></div>\"}\nend tell"
+      ]
+    },
+    {
+      "id": "new_reminder",
+      "description": "Add something to the Reminders app. Use for remind me to X, add X to my reminders, put X on my list.",
+      "args": {
+        "text": {
+          "type": "span"
+        }
+      },
+      "run": [
+        "osascript",
+        "-e",
+        "tell application \"Reminders\"\nmake new reminder with properties {name:\"{text}\"}\nend tell"
+      ]
+    },
+    {
+      "id": "web_search",
+      "description": "Search the web for something the speaker asked to look up, google, or search for.",
+      "args": {
+        "query": {
+          "type": "span"
+        }
+      },
+      "run": [
+        "open",
+        "https://www.google.com/search?q={query|url}"
+      ]
+    },
+    {
+      "id": "new_tab",
+      "description": "Open a new empty browser tab, without saying what to put in it.",
+      "args": {
+        "browser": {
+          "type": "enum",
+          "question": "Which browser should the new tab open in? Pick the one the speaker named.",
+          "options": {
+            "chrome": {
+              "value": "Google Chrome",
+              "desc": "chrome, google chrome"
+            },
+            "safari": {
+              "value": "Safari",
+              "desc": "safari"
+            },
+            "arc": {
+              "value": "Arc",
+              "desc": "arc"
+            },
+            "unspecified": {
+              "value": "default",
+              "desc": "no browser named: this browser, the browser, just a tab",
+              "fallback": true
+            }
+          }
+        }
+      },
+      "run": [
+        "osascript",
+        "-e",
+        "tell application \"{browser}\"\nactivate\ntell window 1 to make new tab at end of tabs\nend tell"
+      ],
+      "run_if": {
+        "browser": {
+          "default": [
+            "open",
+            "https://www.google.com"
+          ],
+          "Safari": [
+            "osascript",
+            "-e",
+            "tell application \"Safari\"\nactivate\ntell window 1 to set current tab to (make new tab)\nend tell"
+          ],
+          "Arc": [
+            "osascript",
+            "-e",
+            "tell application \"Arc\"\nactivate\ntell front window to make new tab with properties {URL:\"https://www.google.com\"}\nend tell"
+          ]
+        }
+      }
+    },
+    {
+      "id": "media_control",
+      "description": "Play, pause, skip or go back a track in whatever is playing music.",
+      "args": {
+        "what": {
+          "type": "enum",
+          "question": "Which transport control?",
+          "options": {
+            "play_pause": "play_pause",
+            "next": "next",
+            "previous": "previous"
+          }
+        }
+      },
+      "run": [
+        "osascript",
+        "-e",
+        "tell application \"Music\" to playpause"
+      ],
+      "run_if": {
+        "what": {
+          "play_pause": [
+            "osascript",
+            "-e",
+            "tell application \"Music\" to playpause"
+          ],
+          "next": [
+            "osascript",
+            "-e",
+            "tell application \"Music\" to next track"
+          ],
+          "previous": [
+            "osascript",
+            "-e",
+            "tell application \"Music\" to previous track"
+          ]
+        }
+      },
+      "refine": true
+    },
+    {
+      "id": "set_volume",
+      "description": "Change the Mac's speaker volume up, down, to a level, or to silent.",
+      "args": {
+        "level": {
+          "type": "enum",
+          "question": "What volume level is the speaker asking for? Judge the level they name, not the direction of change.",
+          "options": {
+            "mute": {
+              "value": "0",
+              "desc": "silent, muted, off, no sound"
+            },
+            "quiet": {
+              "value": "20",
+              "desc": "quiet or low, or turn it down without naming a level"
+            },
+            "half": {
+              "value": "50",
+              "desc": "half, halfway, medium, middle, 50 percent"
+            },
+            "loud": {
+              "value": "80",
+              "desc": "loud, high, turn it up without naming a level"
+            },
+            "max": {
+              "value": "100",
+              "desc": "maximum, full blast, all the way up"
+            }
+          }
+        }
+      },
+      "run": [
+        "osascript",
+        "-e",
+        "set volume output volume {level}"
+      ],
+      "refine": true
+    },
+    {
+      "id": "appearance",
+      "description": "Switch the Mac between dark mode and light mode.",
+      "args": {
+        "mode": {
+          "type": "enum",
+          "question": "Dark or light?",
+          "options": {
+            "dark": {
+              "value": "true",
+              "desc": "dark mode, night mode, make it darker"
+            },
+            "light": {
+              "value": "false",
+              "desc": "light mode, day mode, make it brighter"
+            }
+          }
+        }
+      },
+      "run": [
+        "osascript",
+        "-e",
+        "tell application \"System Events\" to tell appearance preferences to set dark mode to {mode}"
+      ],
+      "refine": true
+    },
+    {
+      "id": "screenshot",
+      "description": "Take a screenshot of the screen and save it to the Desktop.",
+      "args": {},
+      "run": [
+        "screencapture",
+        "-x",
+        "{desktop}/voice-shot.png"
+      ]
+    },
+    {
+      "id": "copy_text",
+      "description": "Put a phrase the speaker dictated onto the clipboard, so it can be pasted.",
+      "args": {
+        "text": {
+          "type": "span"
+        }
+      },
+      "run": [
+        "osascript",
+        "-e",
+        "set the clipboard to \"{text}\""
+      ]
+    },
+    {
+      "id": "spotlight",
+      "description": "Search the Mac's own files for something, rather than the web.",
+      "args": {
+        "query": {
+          "type": "span"
+        }
+      },
+      "run": [
+        "open",
+        "x-apple-spotlight://search?q={query|url}"
+      ]
+    },
+    {
+      "id": "new_finder_window",
+      "description": "Open a new Finder window.",
+      "args": {},
+      "run": [
+        "osascript",
+        "-e",
+        "tell application \"Finder\"\nactivate\nmake new Finder window\nend tell"
+      ]
+    },
+    {
+      "id": "lock_screen",
+      "description": "Lock the screen or put the display to sleep.",
+      "args": {},
+      "run": [
+        "pmset",
+        "displaysleepnow"
+      ]
+    },
+    {
+      "id": "other",
+      "description": "The speaker clearly asked the Mac to do something, but it is not any of the capabilities above. Use this rather than forcing a bad fit.",
+      "args": {},
+      "escalate": true,
+      "min_confidence": 0.45
+    },
+    {
+      "id": "none",
+      "description": "Not an instruction to the computer at all. Small talk, a half-finished phrase, thinking out loud, or something addressed to a person.",
+      "args": {}
+    }
+  ]
+}

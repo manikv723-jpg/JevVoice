@@ -1,0 +1,18 @@
+{"about": "Written after the one tuning pass on actions.json. Never tuned on.",
+ "cases": [
+  {"kind": "holdout", "said": "open a fresh tab in safari", "want": {"action": "new_tab", "app": "Safari"}},
+  {"kind": "holdout", "said": "shut this tab", "want": {"action": "close_tab"}},
+  {"kind": "holdout", "said": "look for cheap hotels in manali", "want": {"action": "web_search", "text": ["cheap hotels in manali"]}},
+  {"kind": "holdout", "said": "pull up netflix", "want": {"action": ["open_website"], "text": "netflix"}},
+  {"kind": "holdout", "said": "write down that the meeting moved to friday", "want": {"action": "new_note"}},
+  {"kind": "holdout", "said": "nudge me to drink water", "want": {"action": "new_reminder", "text": "drink water"}},
+  {"kind": "holdout", "said": "crank up the volume", "want": {"action": "volume", "setting": ["up", "max"]}},
+  {"kind": "holdout", "said": "silence please", "want": {"action": "volume", "setting": "mute"}},
+  {"kind": "holdout", "said": "next track", "want": {"action": "media", "setting": "next"}},
+  {"kind": "holdout", "said": "open my documents folder", "want": {"action": "open_folder", "setting": "documents"}},
+  {"kind": "holdout", "said": "fire up figma", "want": {"action": "open_app", "app": "Figma"}},
+  {"kind": "holdout", "said": "get out of notion", "want": {"action": "none"}},
+  {"kind": "holdout", "said": "kill slack", "want": {"action": "quit_app", "app": "Slack"}},
+  {"kind": "holdout", "said": "i watched the whole series yesterday", "want": {"action": "none"}},
+  {"kind": "holdout", "said": "start voice typing", "want": {"action": "dictate"}}
+ ]}

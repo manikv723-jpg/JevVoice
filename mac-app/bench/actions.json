@@ -1,0 +1,580 @@
+{
+ "about": "Each clause as it reaches an engine. want.action must match; app/text/setting must match when given. app may be a list of acceptable apps.",
+ "cases": [
+  {
+   "kind": "your flow",
+   "said": "open terminal",
+   "want": {
+    "action": "open_app",
+    "app": "Terminal"
+   }
+  },
+  {
+   "kind": "your flow",
+   "said": "add a new tab to the terminal",
+   "want": {
+    "action": "new_tab",
+    "app": "Terminal"
+   }
+  },
+  {
+   "kind": "your flow",
+   "said": "open wispr flow",
+   "want": {
+    "action": [
+     "dictate",
+     "open_app"
+    ]
+   }
+  },
+  {
+   "kind": "your flow",
+   "said": "let me type",
+   "want": {
+    "action": "dictate"
+   }
+  },
+  {
+   "kind": "your flow",
+   "said": "I want to dictate something",
+   "want": {
+    "action": "dictate"
+   }
+  },
+  {
+   "kind": "your flow",
+   "said": "now run it",
+   "want": {
+    "action": "press_enter"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "open a new tab",
+   "want": {
+    "action": "new_tab"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "new tab in chrome",
+   "want": {
+    "action": "new_tab",
+    "app": "Google Chrome"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "give me another tab",
+   "want": {
+    "action": "new_tab"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "one more tab please",
+   "want": {
+    "action": "new_tab"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "close this tab",
+   "want": {
+    "action": "close_tab"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "get rid of this tab",
+   "want": {
+    "action": "close_tab"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "bring back the tab I just closed",
+   "want": {
+    "action": "reopen_tab"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "oops open that tab again",
+   "want": {
+    "action": "reopen_tab"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "go to the next tab",
+   "want": {
+    "action": "next_tab"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "refresh the page",
+   "want": {
+    "action": "reload"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "the page is stuck load it again",
+   "want": {
+    "action": "reload"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "go back",
+   "want": {
+    "action": "go_back"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "take me to the previous page",
+   "want": {
+    "action": "go_back"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "open a new safari window",
+   "want": {
+    "action": "new_window",
+    "app": "Safari"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "make this window full screen",
+   "want": {
+    "action": "fullscreen"
+   }
+  },
+  {
+   "kind": "tabs",
+   "said": "hide this window",
+   "want": {
+    "action": "minimize"
+   }
+  },
+  {
+   "kind": "web",
+   "said": "search for flights to goa",
+   "want": {
+    "action": "web_search",
+    "text": "flights to goa"
+   }
+  },
+  {
+   "kind": "web",
+   "said": "google best biryani in delhi",
+   "want": {
+    "action": "web_search",
+    "text": "best biryani in delhi"
+   }
+  },
+  {
+   "kind": "web",
+   "said": "what is the capital of australia",
+   "want": {
+    "action": "web_search"
+   }
+  },
+  {
+   "kind": "web",
+   "said": "look up the nifty closing price",
+   "want": {
+    "action": "web_search",
+    "text": [
+     "the nifty closing price",
+     "nifty closing price"
+    ]
+   }
+  },
+  {
+   "kind": "web",
+   "said": "open youtube",
+   "want": {
+    "action": "open_website",
+    "text": "youtube"
+   }
+  },
+  {
+   "kind": "web",
+   "said": "go to amazon dot in",
+   "want": {
+    "action": "open_website"
+   }
+  },
+  {
+   "kind": "web",
+   "said": "take me to gmail",
+   "want": {
+    "action": "open_website",
+    "text": "gmail"
+   }
+  },
+  {
+   "kind": "web",
+   "said": "find lofi music on youtube",
+   "want": {
+    "action": "youtube_search",
+    "text": "lofi music"
+   }
+  },
+  {
+   "kind": "web",
+   "said": "play arijit singh songs on youtube",
+   "want": {
+    "action": "youtube_search",
+    "text": "arijit singh songs"
+   }
+  },
+  {
+   "kind": "notes",
+   "said": "make a note saying call the bank tomorrow",
+   "want": {
+    "action": "new_note",
+    "text": "call the bank tomorrow"
+   }
+  },
+  {
+   "kind": "notes",
+   "said": "jot down buy milk and eggs",
+   "want": {
+    "action": "new_note"
+   }
+  },
+  {
+   "kind": "notes",
+   "said": "remind me to pay rent",
+   "want": {
+    "action": "new_reminder",
+    "text": "pay rent"
+   }
+  },
+  {
+   "kind": "notes",
+   "said": "don't let me forget to email ankit",
+   "want": {
+    "action": "new_reminder",
+    "text": "email ankit"
+   }
+  },
+  {
+   "kind": "notes",
+   "said": "add submit the report to my reminders",
+   "want": {
+    "action": "new_reminder",
+    "text": "submit the report"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "turn the volume up",
+   "want": {
+    "action": "volume",
+    "setting": "up"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "it's too loud",
+   "want": {
+    "action": "volume",
+    "setting": [
+     "down",
+     "low"
+    ]
+   }
+  },
+  {
+   "kind": "system",
+   "said": "mute",
+   "want": {
+    "action": "volume",
+    "setting": "mute"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "set volume to half",
+   "want": {
+    "action": "volume",
+    "setting": "half"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "i can't hear anything make it louder",
+   "want": {
+    "action": "volume",
+    "setting": [
+     "up",
+     "max"
+    ]
+   }
+  },
+  {
+   "kind": "system",
+   "said": "pause the music",
+   "want": {
+    "action": "media",
+    "setting": "play_pause"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "skip this song",
+   "want": {
+    "action": "media",
+    "setting": "next"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "play the last song again",
+   "want": {
+    "action": "media",
+    "setting": "previous"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "switch to dark mode",
+   "want": {
+    "action": "appearance",
+    "setting": "dark"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "my eyes hurt make everything dark",
+   "want": {
+    "action": "appearance",
+    "setting": "dark"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "the screen is too bright",
+   "want": {
+    "action": "brightness",
+    "setting": "down"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "take a screenshot",
+   "want": {
+    "action": "screenshot"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "grab what's on my screen",
+   "want": {
+    "action": "screenshot"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "lock my mac",
+   "want": {
+    "action": "lock_screen"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "i'm stepping away lock it",
+   "want": {
+    "action": "lock_screen"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "show me my downloads",
+   "want": {
+    "action": "open_folder",
+    "setting": "downloads"
+   }
+  },
+  {
+   "kind": "system",
+   "said": "where did that file i downloaded go",
+   "want": {
+    "action": "open_folder",
+    "setting": "downloads"
+   }
+  },
+  {
+   "kind": "apps",
+   "said": "open slack",
+   "want": {
+    "action": "open_app",
+    "app": "Slack"
+   }
+  },
+  {
+   "kind": "apps",
+   "said": "open the app i make 3d models in",
+   "want": {
+    "action": "open_app",
+    "app": "Blender"
+   }
+  },
+  {
+   "kind": "apps",
+   "said": "i need to check my email",
+   "want": {
+    "action": "open_app",
+    "app": "Mail"
+   }
+  },
+  {
+   "kind": "apps",
+   "said": "quit telegram",
+   "want": {
+    "action": "quit_app",
+    "app": "Telegram"
+   }
+  },
+  {
+   "kind": "apps",
+   "said": "close whatsapp completely",
+   "want": {
+    "action": "quit_app",
+    "app": "WhatsApp"
+   }
+  },
+  {
+   "kind": "apps",
+   "said": "open tell a gram",
+   "want": {
+    "action": "open_app",
+    "app": "Telegram"
+   }
+  },
+  {
+   "kind": "apps",
+   "said": "open cloud",
+   "want": {
+    "action": "open_app",
+    "app": [
+     "Claude",
+     "Creative Cloud"
+    ]
+   }
+  },
+  {
+   "kind": "hinglish",
+   "said": "chrome kholo",
+   "want": {
+    "action": "open_app",
+    "app": "Google Chrome"
+   }
+  },
+  {
+   "kind": "hinglish",
+   "said": "naya tab kholo",
+   "want": {
+    "action": "new_tab"
+   }
+  },
+  {
+   "kind": "hinglish",
+   "said": "awaaz kam karo",
+   "want": {
+    "action": "volume",
+    "setting": [
+     "down",
+     "low"
+    ]
+   }
+  },
+  {
+   "kind": "hinglish",
+   "said": "gaana band karo",
+   "want": {
+    "action": "media",
+    "setting": "play_pause"
+   }
+  },
+  {
+   "kind": "hinglish",
+   "said": "whatsapp band karo",
+   "want": {
+    "action": "quit_app",
+    "app": "WhatsApp"
+   }
+  },
+  {
+   "kind": "hinglish",
+   "said": "mujhe type karne do",
+   "want": {
+    "action": "dictate"
+   }
+  },
+  {
+   "kind": "chatter",
+   "said": "i opened a new tab earlier and lost it",
+   "want": {
+    "action": "none"
+   }
+  },
+  {
+   "kind": "chatter",
+   "said": "the volume on that video was terrible",
+   "want": {
+    "action": "none"
+   }
+  },
+  {
+   "kind": "chatter",
+   "said": "i should really remind him about the rent",
+   "want": {
+    "action": "none"
+   }
+  },
+  {
+   "kind": "chatter",
+   "said": "she searched everywhere for her keys",
+   "want": {
+    "action": "none"
+   }
+  },
+  {
+   "kind": "chatter",
+   "said": "dark mode looks so much better on the new mac",
+   "want": {
+    "action": "none"
+   }
+  },
+  {
+   "kind": "chatter",
+   "said": "terminal velocity is a great movie",
+   "want": {
+    "action": "none"
+   }
+  },
+  {
+   "kind": "chatter",
+   "said": "let me think about it",
+   "want": {
+    "action": "none"
+   }
+  },
+  {
+   "kind": "chatter",
+   "said": "we should go back to that restaurant",
+   "want": {
+    "action": "none"
+   }
+  }
+ ]
+}

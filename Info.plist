@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleIdentifier</key>
+  <string>ai.manik.jevvoice.listen</string>
+  <key>CFBundleName</key>
+  <string>JevVoiceListen</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>JevVoice listens to your voice so Jev can decide which Mac action to run.</string>
+  <key>NSSpeechRecognitionUsageDescription</key>
+  <string>JevVoice turns your speech into text on-device so Jev can judge it.</string>
+</dict>
+</plist>

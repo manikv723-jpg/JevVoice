@@ -1,0 +1,24 @@
+# Secrets and local env
+.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Compiled listener (built by run.sh / web.sh / open.sh)
+listen
+
+# Local benchmark output
+bench_results.json
+
+# SayOpen build output and local signing material (keychain, password, cert)
+mac-app/signing/
+mac-app/build/
+mac-app/build-cache/
+mac-app/old/
+mac-app/src/*.txt
+
+# Third-party logo, and the slide that embeds it
+slide/wispr-flow-icon.png
+slide/Voice Tool PPT.png
+slide/voice-tool-ppt.html

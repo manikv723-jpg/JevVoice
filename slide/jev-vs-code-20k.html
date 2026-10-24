@@ -1,0 +1,61 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Jev vs Code 20k</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#F2879F}
+.s{width:1920px;height:1080px;position:relative;overflow:hidden;background:#F2879F;color:#1E1E1E;font-family:'Inter Tight',Helvetica,sans-serif}
+.c{position:absolute;width:28px;height:28px;border-color:#1E1E1E;border-style:solid;border-width:0}
+.tl{top:56px;left:56px;border-top-width:3px;border-left-width:3px}.tr{top:56px;right:56px;border-top-width:3px;border-right-width:3px}
+.bl{bottom:56px;left:56px;border-bottom-width:3px;border-left-width:3px}.br{bottom:56px;right:56px;border-bottom-width:3px;border-right-width:3px}
+.wrap{position:absolute;left:150px;right:150px;top:140px;bottom:170px;display:flex;align-items:center;gap:90px}
+.txt{display:flex;flex-direction:column;width:800px;flex:none}
+.k{font:500 34px 'JetBrains Mono',monospace;letter-spacing:.04em;background:#1E1E1E;color:#F2879F;padding:10px 20px;align-self:flex-start;margin-bottom:34px}
+.b{font-weight:900;font-size:124px;line-height:.9;white-space:nowrap;letter-spacing:-.035em}
+.sub{font-weight:600;font-size:36px;line-height:1.25;margin-top:36px;max-width:720px}
+.stat{display:flex;gap:64px;margin-top:44px}
+.stat div{font:500 24px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase}
+.stat b{display:block;font:900 84px 'Inter Tight',sans-serif;letter-spacing:-.03em;text-transform:none;margin-bottom:6px}
+.chart{flex:1;height:100%;display:flex;flex-direction:column}
+.legend{display:flex;gap:40px;font:500 26px 'JetBrains Mono',monospace;margin-bottom:30px}
+.legend span{display:flex;align-items:center;gap:14px}
+.sw{width:30px;height:30px;box-sizing:border-box}
+.plot{flex:1;display:flex;align-items:flex-end;gap:44px;border-bottom:4px solid #1E1E1E;padding:0 10px}
+.grp{flex:1;display:flex;align-items:flex-end;gap:14px;height:100%}
+.bar{flex:1;position:relative;box-sizing:border-box}
+.code{border:4px solid #1E1E1E;border-bottom:0;background:rgba(30,30,30,.06)}
+.jev{background:#1E1E1E}
+.v{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(100% + 10px);font:700 22px 'JetBrains Mono',monospace;white-space:nowrap}
+.x{display:flex;gap:44px;padding:18px 10px 0}
+.x div{flex:1;text-align:center;font:500 24px 'JetBrains Mono',monospace}
+.hl .v{font-size:26px}
+.foot{position:absolute;bottom:72px;left:0;right:0;text-align:center;font:500 26px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+</style></head><body><div class="s">
+<i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+<div class="wrap">
+  <div class="txt">
+    <span class="k">20,000 files</span>
+    <div class="b">Code slows.<br>Jev doesn't.</div>
+    <div class="sub">Plain code has to scan every file. Jev judges the shortlist in the same 0.4&nbsp;s, no matter how big the Mac gets.</div>
+    <div class="stat">
+      <div><b>2.3×</b>faster at 20k</div>
+      <div><b>10/10</b>right file</div>
+    </div>
+  </div>
+  <div class="chart">
+    <div class="legend"><span><i class="sw code" style="border-bottom:4px solid #1E1E1E"></i>Plain code</span><span><i class="sw jev"></i>Jev</span></div>
+    <div class="plot" id="plot"></div>
+    <div class="x" id="x"></div>
+  </div>
+</div>
+<div class="foot">Seconds per request · 10 loose requests · measured on a Mac</div>
+</div>
+<script>
+const d=[["1k",.05,.38],["2k",.10,.38],["10k",.46,.41],["20k",.94,.40]], max=1.0;
+const plot=document.getElementById('plot'), x=document.getElementById('x');
+d.forEach(([n,c,j],i)=>{
+  const g=document.createElement('div');g.className='grp'+(i==3?' hl':'');
+  g.innerHTML=`<div class="bar code" style="height:${c/max*88}%"><span class="v">${c.toFixed(2)}s</span></div><div class="bar jev" style="height:${j/max*88}%"><span class="v">${j.toFixed(2)}s</span></div>`;
+  plot.appendChild(g);
+  const l=document.createElement('div');l.textContent=n+' files';x.appendChild(l);
+});
+</script>
+</body></html>
